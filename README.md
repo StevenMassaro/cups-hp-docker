@@ -2,7 +2,7 @@
 CUPS server running in a docker container, automatically configured to work with HP Printers.
 
 ## Motivation
-I have an HP LaserJet 1018 printer, and wanted it to be automatically configured on my server to run inside CUPS. Additionally, I needed the docker container to automatically reconfigure the printer upon server restarts.
+I have an HP LaserJet 1018 printer, and wanted it to be automatically configured on my server to run inside CUPS, so that I could wireless print from my laptop to my Linux server (where the printer is plugged in via USB). Additionally, I needed the docker container to automatically reconfigure the printer upon server restarts.
 
 ## Compatibility
 
@@ -32,18 +32,19 @@ services:
 ### Add printer to CUPS
 
 1. Go to the cups admin page
-2. Click Administration > Find New Printers
-3. Click "HP LaserJet 1018" (the one with the serial number at the end, it might not matter, but this worked for me)
-4. Click "Share this printer" and click "Continue"
-5. In the driver select page, I used this driver: "HP LaserJet 1018, hpcups 3.22.10, requires proprietary plugin (en)" (I selected the first one, there are many duplicates in the list)
-6. Then click "Add Printer" and print a test page.
+2. Click `Administration` > `Find New Printers`
+3. Click `HP_LaserJet_1018_USB_<serial>_HPLIP` (the one with the serial number at the end, it might not matter, but this worked for me)
+4. Click `Share this printer` and click `Continue`
+5. In the driver select page, I used this driver: `HP LaserJet 1018, hpcups 3.22.10, requires proprietary plugin (en)` (I selected the first one, there are many duplicates in the list)
+6. Then click `Add Printer` and print a test page.
 
 ### Add remote printer to Windows
 
 1. Go to the add new printer window and click add
 2. The printer won't be found immediately, so click that it wasn't listed
-3. Select a shared printer by name with entry `http://<IP/hostname>:631/printers/HP_LaserJet_1018`
+3. Select a shared printer by name with entry `http://<IP/hostname>:631/printers/HP_LaserJet_1018_USB_<serial>_HPLIP`
 4. Use the `MS Publisher Imagesetter` driver under the `Generic` manufacturer
+5. Print a test page from Windows.
 
 ### Other useful commands
 
