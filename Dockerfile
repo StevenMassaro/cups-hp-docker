@@ -1,4 +1,4 @@
-FROM anujdatar/cups
+FROM anujdatar/cups:23.09.01
 
 COPY run.sh /
 
