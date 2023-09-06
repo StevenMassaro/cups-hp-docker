@@ -1,8 +1,6 @@
 #!/usr/bin/expect
 
 spawn hp-plugin -i --path hplip-3.22.10-plugin.run
-expect "Do you still want to install the plug-in? (y=yes, n=no*, q=quit) ?\r"
-send -- "y\r"
 expect "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?\r"
 send -- "y\r"
 expect eof
