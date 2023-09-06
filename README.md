@@ -76,5 +76,5 @@ Communication status: Good
 ```
 
 ## Potential issues
-- Unplugging and replugging the printer (or any action which gives it a new USB ID) would probably render this solution non-working.
+- Unplugging and replugging the printer (or any action which gives it a new USB ID) would probably render this solution non-working. This might require some kind of uninstallation in the `startup.sh` script. [helpful link 1](https://askubuntu.com/questions/1056077/how-to-install-latest-hplip-on-my-ubuntu-to-support-my-hp-printer-and-or-scanner) [helpful link 2](https://developers.hp.com/hp-linux-imaging-and-printing/howtos/install#howtocheck7)
 
