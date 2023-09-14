@@ -17,6 +17,7 @@ services:
   cups:
     container_name: cups
     image: stevenmassaro/cups-hp-docker
+    user: '1000:1000'
     ports:
       - '631:631'
     devices:
