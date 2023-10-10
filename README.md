@@ -4,6 +4,9 @@ CUPS server running in a docker container, automatically configured to work with
 ## Motivation
 I have an HP LaserJet 1018 printer, and wanted it to be automatically configured on my server to run inside CUPS, so that I could wireless print from my laptop to my Linux server (where the printer is plugged in via USB). Additionally, I needed the docker container to automatically reconfigure the printer upon server restarts.
 
+## Archival
+I found a printer that has an ethernet port on the side of the road shortly after making this. The new printer works so I'm archiving this repo. A note for future visitors here, this repo did work for me. As I recall though, I had to use the plain cups image that this one is based on to set up the printer, then switch to this image after it was set up.
+
 ## Compatibility
 
 | Printer | Connectivity | Notes |
