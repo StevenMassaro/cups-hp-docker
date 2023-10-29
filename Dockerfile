@@ -1,4 +1,4 @@
-FROM anujdatar/cups:23.09.01
+FROM anujdatar/cups:23.10.01
 
 COPY startup.sh /
 
